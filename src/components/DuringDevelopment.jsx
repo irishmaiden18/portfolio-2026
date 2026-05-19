@@ -1,4 +1,6 @@
-const Development = () => {
+import '../bootstrap-isolate.css'
+
+const DuringDevelopment = () => {
     return(
         <>
             <div className="d-block d-sm-none fa-2x">XS</div>
@@ -7,8 +9,9 @@ const Development = () => {
             <div className="d-none d-lg-block d-xl-none fa-2x">L</div>
             <div className="d-none d-xl-block d-xxl-none fa-2x">XL</div>
             <div className="d-none d-xxl-block fa-2x">XXL</div>
+            {/* Note: remove bootstrap immport from main.jsx, this file and uninstiall bootstrap with "npm uninstall bootstrap" */}
         </>
     )
 }
 
-export default Development
+export default DuringDevelopment

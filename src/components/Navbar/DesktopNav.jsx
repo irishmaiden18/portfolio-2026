@@ -1,7 +1,8 @@
 const DesktopNav = () => {
   return (
     <>
-        <h2 className="underline text-blue-600">Desktop Navbar</h2>
+        <h2>Desktop Navbar</h2>
+        <h1 className="font-[tangerine]">Laura Pohl Web Developer</h1>
     </>
   )
 }

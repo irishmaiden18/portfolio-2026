@@ -10,6 +10,7 @@ import DuringDevelopment from './components/DuringDevelopment'
 import { useEffect, useState } from 'react'
 import HamburgerNav from './components/Navbar/HamburgerNav'
 import DesktopNav from './components/Navbar/DesktopNav'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -46,18 +47,23 @@ function App() {
   
   return (
     <>
-      <DuringDevelopment/>
+      <div className="min-h-screen flex flex-col jusitify=between bg-linear-to-b from-[#6BD1DF] to-[#FFFFFF]">
 
-      {NavFunction()}
+        <DuringDevelopment/>
 
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/my-story" element={<MyStory/>}/>
-        <Route path="/mascots" element={<Mascots/>}/>
-        <Route path="/portfolio" element={<Portfolio/>}/>
-        <Route path="/resume" element={<Resume/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-      </Routes>
+        {NavFunction()}
+
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/my-story" element={<MyStory/>}/>
+          <Route path="/mascots" element={<Mascots/>}/>
+          <Route path="/portfolio" element={<Portfolio/>}/>
+          <Route path="/resume" element={<Resume/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+        </Routes>
+
+        <Footer/>
+      </div>
     </>
   )
 }

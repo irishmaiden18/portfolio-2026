@@ -10,7 +10,7 @@ const DesktopNav = () => {
   return (
     <>
       <div className="bg-[#333333] text-white container mx-auto">
-        <h1 className="font-[tangerine] pt-[4rem] px-5 pb-1 text-7xl">Laura Pohl Web Developer</h1>
+        <h1 className="font-[tangerine] pt-16 px-5 pb-1 text-7xl">Laura Pohl Web Developer</h1>
 
         <nav>
           <ul className="flex items-end">

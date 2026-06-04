@@ -8,16 +8,15 @@ const HamburgerNav = () => {
 
   const {pathname} = useLocation()
 
-
   return (
     <>
       {/* <h2>Hamburger Navbar</h2> */}
       <div className="relative bg-[#333333] text-white">
-        <h1 className="font-[tangerine] pt-[3rem] px-5 pb-2 text-6xl">Laura Pohl Web Developer</h1>
+        <h1 className="font-[tangerine] pt-12 px-5 pb-2 text-6xl">Laura Pohl Web Developer</h1>
         <div className="absolute top-1 right-1 p-2 pb-0 z-50">
           <a href="#" onClick={() => setIsOpen(!isOpen)}>
             <button>
-              <img src="burger-menu-gray.svg" alt="burger menu icon" className="w-[30px] h-auto "/>
+              <img src="burger-menu-gray.svg" alt="burger menu icon" className="w-7.5 h-auto "/>
             </button>
           </a>
         </div>

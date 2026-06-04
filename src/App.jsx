@@ -48,8 +48,6 @@ function App() {
     <>
       <DuringDevelopment/>
 
-      <h1>Portfolio</h1>
-
       {NavFunction()}
 
       <Routes>

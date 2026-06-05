@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react'
 import HamburgerNav from './components/Navbar/HamburgerNav'
 import DesktopNav from './components/Navbar/DesktopNav'
 import Footer from './components/Footer'
+import Resources from './components/Resources'
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
   
   return (
     <>
-      <div className="min-h-screen flex flex-col jusitify=between bg-linear-to-b from-[#6BD1DF] to-[#FFFFFF]">
+      <div className="min-h-screen flex flex-col jusitify-between bg-linear-to-b from-[#6BD1DF] to-[#FFFFFF]">
 
         <DuringDevelopment/>
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio/>}/>
           <Route path="/resume" element={<Resume/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/resources" element={<Resources/>}/>
         </Routes>
 
         <Footer/>

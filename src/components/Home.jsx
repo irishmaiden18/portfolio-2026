@@ -4,12 +4,12 @@ const Home = () => {
   return (
     <>
         {/* <h2>Home Page</h2> */}
-        <div className="container mx-auto grid grid-cols-1 gap-y-3">
-          <div className="w-full flex">
-            <div className="w-[75%] bg-white flex items-center justify-center">
-              <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl text-center">My goal is to improve your online presence!</h2>
+        <div className="md:container mx-auto grid grid-cols-1 gap-y-3">
+          <div className="w-full flex flex-col-reverse md:flex-row">
+            <div className="w-[80%] mx-auto p-8 md:w-[75%] md:p-0 bg-white flex items-center justify-center">
+              <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl text-center">My goal is to improve your online presence!</h2>
             </div>
-            <div className="w-[25%]">
+            <div className="w-[80%] block mx-auto pt-10 md:pt-0 md:w-[25%]">
               <img src="laura_pohl_in_nature-homepage-main.jpg" alt="picture of Laura Pohl" className="w-full h-auto object-cover"/>
             </div>
           </div>
@@ -27,9 +27,9 @@ const Home = () => {
               <img src="laura_pohl_in_nature-homepage-main.jpg" alt="picture of my story page" className="w-[60%] h-auto object-cover"/>
             </Link>
           </div>
-          <div className="m-4">
-            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl text-center p-4">Testimonials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="m-4 max-w-6xl mx-auto pb-2">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center pt-4 pb-8">Testimonials</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-20">
               <p className="text-justify text-justify-inner-word">I hired Laura to build our high school baseball team’s website from the ground up, and the result was outstanding. She was a pleasure to work with throughout the entire process.  Laura is detail-oriented, knowledgeable, efficient, and full of great ideas to make your website standout. I highly recommend her to anyone looking for a website that is visually appealing, easy to navigate, and tailored to your organization. You won’t be disappointed!</p>
 
               <p className="text-justify text-justify-inner-word">I hired Laura to build our high school baseball team’s website from the ground up, and the result was outstanding. She was a pleasure to work with throughout the entire process.  Laura is detail-oriented, knowledgeable, efficient, and full of great ideas to make your website standout. I highly recommend her to anyone looking for a website that is visually appealing, easy to navigate, and tailored to your organization. You won’t be disappointed!</p>

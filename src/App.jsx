@@ -1,7 +1,7 @@
 import './index.css'
 import { Route, Routes } from 'react-router'
 import Home from './components/Home'
-import MyStory from './components/MyStory'
+import MyStory from './components/MyStory/MyStory'
 import Mascots from './components/Mascots'
 import Portfolio from './components/Portfolio'
 import Resume from './components/Resume'

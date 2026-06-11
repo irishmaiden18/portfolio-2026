@@ -1,22 +1,26 @@
 export const development_skills = [
     {
         id: 0,
-        text: "Website Design & Development",
+        text: "Website Design",
     },
     {
         id: 1,
-        text: "Responsive Design",
+        text: "Website Development",
     },
     {
         id: 2,
-        text: "Wireframing",
+        text: "Responsive Design",
     },
     {
         id: 3,
-        text: "Custom Coding Websites",
+        text: "Wireframing",
     },
     {
         id: 4,
+        text: "Custom Coding Websites",
+    },
+    {
+        id: 5,
         text: "WordPress",
     }
 ]

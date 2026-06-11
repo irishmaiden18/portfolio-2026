@@ -23,14 +23,14 @@ export const education = [
     {
         id: 3,
         subject: "Information Technology",
-        honors: "summa cum laude,",
+        honors: "summa cum laude",
         degree_type: "Bachelor of Science",
         institution: "University of Massachusetts Lowell",
     },
     {
         id: 4,
         subject: "Mathematics & Fine Arts: Studio Art",
-        honors: "cum laude,",
+        honors: "cum laude",
         degree_type: "Bachelor of Arts",
         institution: "Brandeis University",
     },

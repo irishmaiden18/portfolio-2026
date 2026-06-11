@@ -27,37 +27,49 @@ const MyStory = () => {
           <div className="clear-both"></div>
         </div>
         <hr/>
-        <div>
+        <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-2 lg:gap-0">
           <div>
             <div>
-              <h3>Development Skills</h3>
-              <WebSkillsList/>
+              <h3 className="text-center text-2xl py-4 lg:pt-8">Development Skills</h3>
+              <div className="pl-6">
+                <WebSkillsList/>
+              </div>
             </div>
-            <div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30">
               <div>
-                <h3>Languages & Frameworks</h3>
-                <h4>Proficient with:</h4>
-                <ProficientList/>
-                <h4>Experience with:</h4>
-                <OtherList/>
+                <h3 className="text-2xl py-4 pl-4">Technology</h3>
+                <h4 className="pl-6 md:pl-8 xl:pl-6 ">Proficient with:</h4>
+                <div className="pl-10 md:pl-12 xl:pl-10">
+                  <ProficientList/>
+                </div>
+                <h4 className="pl-6 md:pl-8 xl:pl-6 pt-4">Experience with:</h4>
+                <div className="pl-10 md:pl-12 xl:pl-10">
+                  <OtherList/>
+                </div>
               </div>
               <div>
-                <h3>Tools</h3>
-                <ToolsList/>
+                <h3 className="text-2xl py-4 pl-4">Tools</h3>
+                <div className="pl-6 md:pl-4">
+                  <ToolsList/>
+                </div>
               </div>
             </div>
           </div>
           <div>
-            <div>
-              <h3>Education</h3>
-              <EducationList/>
+            <div className="w-full px-4 md:px-8 lg:px-0 md:pt-4 md:pb-0 lg:pt-8 lg:pb-2">
+              <h3 className="text-center text-2xl">Education</h3>
+              <div className="w-full md:flex lg:block md:justify-center py-4">
+                <div className="w-full text-center md:text-left md:w-fit">
+                  <EducationList/>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3>When I'm Not Designing Webpages...</h3>
-              <p>I make sure I spend plenty of time with my two furbabies, Baxter & Ninja. There is nothing more rewarding than being loved by your pets!</p>
-              <p>I love to sit in front of the fire and play a game of Civilization with my husband.</p>
-              <p>I LOVE to build Legos! My favorites are the modular buildings, the plants, the world map wall hanging, and the great wonders (i.e. Taj Mahal, Sydney Opera House etc.).</p>
-              <p>Right now I spend a lot of my time watching silly British TV while crocheting a blanket for my husband. </p>
+            <div className="w-[90%] lg:w-full mx-auto lg:mx-0 p-3 pb-0 lg:pl-0 lg:pr-4 xl:pr-6 lg:hidden xl:flex xl:flex-col">
+              <h3 className="text-center text-2xl pb-4">When I'm Not Designing Webpages...</h3>
+              <p className="text-base text-left md:text-justify mb-4">I make sure I spend plenty of time with my two furbabies, Baxter & Ninja. There is nothing more rewarding than being loved by your pets!</p>
+              <p className="text-base text-left md:text-justify mb-4">I love to sit in front of the fire and play a game of Civilization with my husband.</p>
+              <p className="text-base text-left md:text-justify mb-4">I LOVE to build Legos! My favorites are the modular buildings, the plants, the world map wall hanging, and the great wonders (i.e. Taj Mahal, Sydney Opera House etc.).</p>
+              <p className="text-base text-left md:text-justify mb-4">Right now I spend a lot of my time watching silly British TV while crocheting a blanket for my husband. </p>
             </div>
           </div>
         </div>

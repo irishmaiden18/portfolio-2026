@@ -48,8 +48,8 @@ const MyStory = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl py-4 pl-4">Tools</h3>
-                <div className="pl-6 md:pl-4">
+                <h3 className="text-2xl py-4 pl-4 sm:pl-2 2xl:pl-6">Tools</h3>
+                <div className="pl-6 sm:pl-4 md:pl-4 2xl:pl-8">
                   <ToolsList/>
                 </div>
               </div>

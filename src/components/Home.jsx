@@ -41,3 +41,8 @@ const Home = () => {
 }
 
 export default Home
+
+// add screen shot of portfolio page
+// add screen shot of resume page
+// add Jeremy's headshot
+// get testimonial from church

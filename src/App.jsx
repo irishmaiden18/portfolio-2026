@@ -12,6 +12,7 @@ import HamburgerNav from './components/Navbar/HamburgerNav'
 import DesktopNav from './components/Navbar/DesktopNav'
 import Footer from './components/Footer'
 import Resources from './components/Resources'
+import ComingSoon from './components/ComingSoon'
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/my-story" element={<MyStory/>}/>
-          <Route path="/mascots" element={<Mascots/>}/>
+          <Route path="/mascots" element={<ComingSoon/>}/>
           <Route path="/portfolio" element={<Portfolio/>}/>
           <Route path="/resume" element={<Resume/>}/>
           <Route path="/contact" element={<Contact/>}/>

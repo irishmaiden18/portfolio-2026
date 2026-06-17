@@ -9,6 +9,7 @@ const Contact = () => {
     email: "",
     phone: "",
     response: "",
+    subjects: [],
     message: ""
   })
 
@@ -21,13 +22,31 @@ const Contact = () => {
   // lets the user know the form has been submitted and the server is processing the request so they don't double submit and know what is happening
   const [loading, setLoading] = useState(false)
 
-  // records user input to the state values as the user types
+  // records user input to the state values as the user types from (text, textarea, radiobox fields)
   const handleChange = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     })
   }
+
+  // records user input to the state variable when the user clicks a checkbox
+  const handleMultiCheckboxChange = (event) => {
+
+    // get the value and checked status of the checkboxes
+    const {value, checked} = event.target
+
+    const currentSubjects = formData.subjects
+
+    // if the box is checked, add it to the subjects array, if it is unchecked create a new array without it
+    const updatedSubjects = checked ? [...currentSubjects, value] : currentSubjects.filter((subject) => subject !== value)
+
+    setFormData({
+      ...formData,
+      subjects: updatedSubjects
+    })
+  }
+
 
   // on submission of the form this function executes
   // async because we are using await
@@ -66,6 +85,8 @@ const Contact = () => {
           company: "",
           email: "",
           phone: "",
+          response: "",
+          subjects: [],
           message: ""
         })
 
@@ -167,6 +188,66 @@ const Contact = () => {
                   required
                 />
                 <label htmlFor="no">No</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label>What would you like to talk about?</label>
+            <div>
+              {/* Career Opportunity */}
+              <div>
+                <input
+                  type="checkbox"
+                  name="subjects"
+                  value="Career Opportunity"
+                  checked={formData.subjects.includes("Career Opportunity")}
+                  onChange={handleMultiCheckboxChange}
+                />
+                <label>Career Opportunity</label>
+              </div>
+              {/* Individual Project */}
+              <div>
+                <input
+                  type="checkbox"
+                  name="subjects"
+                  value="Individual Project"
+                  checked={formData.subjects.includes("Individual Project")}
+                  onChange={handleMultiCheckboxChange}
+                />
+                <label>Individual Project</label>
+              </div>
+              {/* Suggestion */}
+              <div>
+                <input
+                  type="checkbox"
+                  name="subjects"
+                  value="Suggestion"
+                  checked={formData.subjects.includes("Suggestion")}
+                  onChange={handleMultiCheckboxChange}
+                />
+                <label>Suggestion</label>
+              </div>
+              {/* Site Problem or Bug */}
+              <div>
+                <input
+                  type="checkbox"
+                  name="subjects"
+                  value="Site Problem or Bug"
+                  checked={formData.subjects.includes("Site Problem or Bug")}
+                  onChange={handleMultiCheckboxChange}
+                />
+                <label>Site Problem or Bug</label>
+              </div>
+              {/* Something Else */}
+              <div>
+                <input
+                  type="checkbox"
+                  name="subjects"
+                  value="Something Else"
+                  checked={formData.subjects.includes("Something Else")}
+                  onChange={handleMultiCheckboxChange}
+                />
+                <label>Something Else</label>
               </div>
             </div>
           </div>

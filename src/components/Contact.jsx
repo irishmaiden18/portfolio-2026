@@ -119,164 +119,180 @@ const Contact = () => {
 
   return (
     <>
-      <div>
-        <h2>Contact Me!</h2>
+      <div className="container mx-auto flex flex-col items-center">
 
-        <p>Whether you’d like to work with me, or learn more about me, I’m excited to talk to you! Your first step is to fill out the form below.</p>
+        <h2 className="text-center text-2xl mt-10 mb-2">Contact Me!</h2>
 
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label>Company (Optional)</label>
-            <input
-              type="text"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label>Email (Optional)</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label>Phone Number (Optional)</label>
-            <input
-              type="text"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label>Would you like a response?</label>
+        <div className="flex flex-col items-center gap-4 w-full max-w-xl p-3">
+        
+          <p className="text-lg text-center px-2 pb-4">Whether you’d like to work with me, or learn more about me, I’m excited to talk to you! Your first step is to fill out the form below.</p>
+
+          {/* focus:outline-none turns off tailwind's automatic form formatting so I can change focus border with styling */}
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-xl">
             <div>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Name"
+                className="bg-white rounded-xl p-2 placeholder:text-black w-full border border-white focus:outline-none focus:border-2 focus:border-[#008593]"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                placeholder="Company (Optional)"
+                className="bg-white rounded-xl p-2 placeholder:text-black w-full border border-white focus:outline-none focus:border-2 focus:border-[#008593]"
+              />
+            </div>
+            <div>
+              {/* <label>Email (Optional)</label> */}
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email (Optional)"
+                className="bg-white rounded-xl p-2 placeholder:text-black w-full border border-white focus:outline-none focus:border-2 focus:border-[#008593]"
+              />
+            </div>
+            <div>
+              {/* <label>Phone Number (Optional)</label> */}
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number (Optional)"
+                className="bg-white rounded-xl p-2 placeholder:text-black w-full border border-white focus:outline-none focus:border-2 focus:border-[#008593]"
+              />
+            </div>
+            <div className="pl-4">
               <div>
-                <input
-                  type="radio"
-                  id="yes"
-                  name="response"
-                  value="Yes"
-                  checked={formData.response === "Yes"}
-                  onChange={handleChange}
-                  required
-                />
-                <label htmlFor="yes">Yes</label>
+                <label>Would you like a response?</label>
+                <div className="px-4">
+                  <div className="py-2">
+                    <input
+                      type="radio"
+                      id="yes"
+                      name="response"
+                      value="Yes"
+                      checked={formData.response === "Yes"}
+                      onChange={handleChange}
+                      required
+                    />
+                    <label htmlFor="yes" className="pl-2">Yes</label>
+                  </div>
+                  <div className="pb-2">
+                    <input
+                      type="radio"
+                      id="no"
+                      name="response"
+                      value="No"
+                      checked={formData.response === "No"}
+                      onChange={handleChange}
+                      required
+                    />
+                    <label htmlFor="no" className="pl-2">No</label>
+                  </div>
+                </div>
               </div>
               <div>
-                <input
-                  type="radio"
-                  id="no"
-                  name="response"
-                  value="No"
-                  checked={formData.response === "No"}
-                  onChange={handleChange}
-                  required
-                />
-                <label htmlFor="no">No</label>
+                <label>What would you like to talk about?</label>
+                <div className="px-4">
+                  {/* Career Opportunity */}
+                  <div className="py-2">
+                    <input
+                      type="checkbox"
+                      name="subjects"
+                      value="Career Opportunity"
+                      checked={formData.subjects.includes("Career Opportunity")}
+                      onChange={handleMultiCheckboxChange}
+                    />
+                    <label className="pl-2">Career Opportunity</label>
+                  </div>
+                  {/* Individual Project */}
+                  <div className="pb-2">
+                    <input
+                      type="checkbox"
+                      name="subjects"
+                      value="Individual Project"
+                      checked={formData.subjects.includes("Individual Project")}
+                      onChange={handleMultiCheckboxChange}
+                    />
+                    <label className="pl-2">Individual Project</label>
+                  </div>
+                  {/* Suggestion */}
+                  <div className="pb-2">
+                    <input
+                      type="checkbox"
+                      name="subjects"
+                      value="Suggestion"
+                      checked={formData.subjects.includes("Suggestion")}
+                      onChange={handleMultiCheckboxChange}
+                    />
+                    <label className="pl-2">Suggestion</label>
+                  </div>
+                  {/* Site Problem or Bug */}
+                  <div className="pb-2">
+                    <input
+                      type="checkbox"
+                      name="subjects"
+                      value="Site Problem or Bug"
+                      checked={formData.subjects.includes("Site Problem or Bug")}
+                      onChange={handleMultiCheckboxChange}
+                    />
+                    <label className="pl-2">Site Problem or Bug</label>
+                  </div>
+                  {/* Something Else */}
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="subjects"
+                      value="Something Else"
+                      checked={formData.subjects.includes("Something Else")}
+                      onChange={handleMultiCheckboxChange}
+                    />
+                    <label className="pl-2">Something Else</label>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <label>What would you like to talk about?</label>
             <div>
-              {/* Career Opportunity */}
-              <div>
-                <input
-                  type="checkbox"
-                  name="subjects"
-                  value="Career Opportunity"
-                  checked={formData.subjects.includes("Career Opportunity")}
-                  onChange={handleMultiCheckboxChange}
-                />
-                <label>Career Opportunity</label>
-              </div>
-              {/* Individual Project */}
-              <div>
-                <input
-                  type="checkbox"
-                  name="subjects"
-                  value="Individual Project"
-                  checked={formData.subjects.includes("Individual Project")}
-                  onChange={handleMultiCheckboxChange}
-                />
-                <label>Individual Project</label>
-              </div>
-              {/* Suggestion */}
-              <div>
-                <input
-                  type="checkbox"
-                  name="subjects"
-                  value="Suggestion"
-                  checked={formData.subjects.includes("Suggestion")}
-                  onChange={handleMultiCheckboxChange}
-                />
-                <label>Suggestion</label>
-              </div>
-              {/* Site Problem or Bug */}
-              <div>
-                <input
-                  type="checkbox"
-                  name="subjects"
-                  value="Site Problem or Bug"
-                  checked={formData.subjects.includes("Site Problem or Bug")}
-                  onChange={handleMultiCheckboxChange}
-                />
-                <label>Site Problem or Bug</label>
-              </div>
-              {/* Something Else */}
-              <div>
-                <input
-                  type="checkbox"
-                  name="subjects"
-                  value="Something Else"
-                  checked={formData.subjects.includes("Something Else")}
-                  onChange={handleMultiCheckboxChange}
-                />
-                <label>Something Else</label>
-              </div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="6"
+                placeholder="Message"
+                className="bg-white rounded-xl p-2 placeholder:text-black w-full border border-white focus:outline-none focus:border-2 focus:border-[#008593]"
+              />
             </div>
-          </div>
-          <div>
-            <label>Message</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="4"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={loading}
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
+            {/* mx-auto: centers the button */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-[#008593] text-white rounded-xl p-2 w-1/4 mx-auto hover:text-black hover:bg-[#7FD7E3]"
+            >
+              {loading ? "Sending..." : "Submit"}
+            </button>
+          </form>
 
-        {/* dynamic user submission messages based on feedback from the Node server backend */}
-        {status.text && (
-          
-          // turns green if its a success message, turns red if it is an error message
-          <div className={`mt-4 p-3 rounded text-center ${status.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
-            {status.text}
-          </div>
-        )}
+          {/* dynamic user submission messages based on feedback from the Node server backend */}
+          {status.text && (
+            
+            // turns green if its a success message, turns red if it is an error message
+            <div className={`mt-4 p-3 rounded text-center ${status.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+              {status.text}
+            </div>
+          )}
+        </div>
       </div>
     </>
   )

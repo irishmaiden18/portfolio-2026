@@ -31,13 +31,13 @@ const Home = () => {
             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center pt-4 pb-8">Testimonials</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-20">
               <div>
-                <p className="text-justify text-justify-inner-word">I hired Laura to build our high school baseball team’s website from the ground up, and the result was outstanding. She was a pleasure to work with throughout the entire process.  Laura is detail-oriented, knowledgeable, efficient, and full of great ideas to make your website standout. I highly recommend her to anyone looking for a website that is visually appealing, easy to navigate, and tailored to your organization. You won’t be disappointed!</p>
-                <p className="text-right">- Jane</p>
+                <p className="text-justify text-justify-inner-word px-8 md:px-4">I hired Laura to build our high school baseball team’s website from the ground up, and the result was outstanding. She was a pleasure to work with throughout the entire process. Laura is detail-oriented, knowledgeable, efficient, and full of great ideas to make your website standout. I highly recommend her to anyone looking for a website that is visually appealing, easy to navigate, and tailored to your organization. You won’t be disappointed!</p>
+                <p className="text-right px-8 md:px-4">- Jane</p>
               </div>
 
               <div>
-                <p className="text-justify text-justify-inner-word">I hired Laura to build our high school baseball team’s website from the ground up, and the result was outstanding. She was a pleasure to work with throughout the entire process.  Laura is detail-oriented, knowledgeable, efficient, and full of great ideas to make your website standout. I highly recommend her to anyone looking for a website that is visually appealing, easy to navigate, and tailored to your organization. You won’t be disappointed!</p>
-                <p className="text-right">- Jane</p>
+                <p className="text-justify text-justify-inner-word px-8 md:px-4">I hired Laura to build our high school baseball team’s website from the ground up, and the result was outstanding. She was a pleasure to work with throughout the entire process. Laura is detail-oriented, knowledgeable, efficient, and full of great ideas to make your website standout. I highly recommend her to anyone looking for a website that is visually appealing, easy to navigate, and tailored to your organization. You won’t be disappointed!</p>
+                <p className="text-right px-8 md:px-4">- Jane</p>
               </div>
             </div>
           </div>
@@ -48,7 +48,5 @@ const Home = () => {
 
 export default Home
 
-// add screen shot of portfolio page
-// add screen shot of resume page
 // add Jeremy's headshot
 // get testimonial from church

@@ -23,7 +23,7 @@ const ProjectItem = ({ projects }) => {
 
             {/* middle section: description; this row absorbs all variable height */}
             <div className="w-[85%] mx-auto flex flex-col justify-start items-start">
-                <p className="pt-4 pb-2">{description}</p>
+                <p className="pt-4 pb-2 text-justify text-justify-inner-word">{description}</p>
             </div>
 
             {/* bottom section: technology used & buttons; starts at the EXACT same pixel height globally */}
@@ -31,7 +31,7 @@ const ProjectItem = ({ projects }) => {
 
                 <div className="min-h-15 md:mb-2">
 
-                    <p className=""><span className="font-bold text-lg">Technology Used: </span>{technology}</p>
+                    <p className="text-justify text-justify-inner-word"><span className="font-bold text-lg">Technology Used: </span>{technology}</p>
 
                 </div>
           

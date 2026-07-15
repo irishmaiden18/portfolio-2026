@@ -17,4 +17,9 @@ export const projects = [
         site: "https://irishmaiden18.github.io/Animal-Word-Scramble-Game/",
         github: "https://github.com/irishmaiden18/Animal-Word-Scramble-Game"
     },
+    {
+        id: 2,
+        name: "",
+        image: "coming_soon.jpg",
+    },
 ]

@@ -19,7 +19,6 @@ export const projects = [
     },
     {
         id: 2,
-        name: "",
         image: "coming_soon.jpg",
     },
 ]

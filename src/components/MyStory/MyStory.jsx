@@ -13,8 +13,8 @@ const MyStory = () => {
 
             <h1 className="text-3xl mt-1 md:mt-5 mb-5 text-center order-2">My Story</h1>
 
-            <div className="mx-auto order-1 w-[85%] md:w-[40%] lg:w-[30%] xl:w-[25%] 2xl:w-[18%] pb-6 pt-8 md:pt-2 md:pb-1 lg:pb-0 xl:pt-0 xl:pb-5 md:float-right md:ml-6 md:mr-2">
-              <img src="laura_pohl_in_nature-homepage-main.jpg" alt="picture of Laura Pohl" className="w-full h-auto object-contain block"/>
+            <div className="mx-auto order-1 w-[85%] md:w-[40%] lg:w-[30%] xl:w-[20%] 2xl:w-[15%] pb-6 pt-8 md:pt-2 md:pb-1 lg:pb-0 xl:pt-0 xl:pb-5 md:float-right md:ml-6 md:mr-2">
+              <img src="me_myStory.jpg" alt="picture of Laura Pohl" className="w-full h-auto object-contain block"/>
             </div>
       
             <p className="mb-4 2xl:mt-6 text-base text-justify text-justify-inner-word md:mx-2 order-3">I was raised a few miles from a beach near the redwood forests in Santa Cruz, California. Although I loved the redwoods and the beach, I moved to the East Coast for College. I intended to stay only a few years, but it soon became my home. I graduated from Brandeis University with a Bachelor’s degree in Math and Studio Art specializing in oil painting. My passion for creative problem-solving led me to a career in finance, but after a few years, I realized I needed work that was more meaningful-for myself and my clients.</p>
@@ -27,7 +27,7 @@ const MyStory = () => {
           <div className="clear-both"></div>
         </div>
         <hr/>
-        <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-2 lg:gap-0">
+        <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-2 lg:gap-0 pb-0 lg:pb-7 xl:pb-0">
           <div>
             <div>
               <h3 className="text-center text-2xl py-4 lg:pt-8">Development Skills</h3>
@@ -56,7 +56,7 @@ const MyStory = () => {
             </div>
           </div>
           <div>
-            <div className="w-full px-4 md:px-8 lg:px-0 md:pt-4 md:pb-0 lg:pt-8 lg:pb-2">
+            <div className="w-full px-4 md:px-8 lg:px-0 pt-2 lg:pt-8 md:pb-4 lg:pb-2">
               <h3 className="text-center text-2xl">Education</h3>
               <div className="w-full md:flex lg:block md:justify-center py-4">
                 <div className="w-full text-center md:text-left md:w-fit">
@@ -64,6 +64,7 @@ const MyStory = () => {
                 </div>
               </div>
             </div>
+            <hr className="pt-4 lg:hidden"/>
             <div className="w-[90%] lg:w-full mx-auto lg:mx-0 p-3 pb-0 lg:pl-0 lg:pr-4 xl:pr-6 lg:hidden xl:flex xl:flex-col">
               <h3 className="text-center text-2xl pb-4">When I'm Not Designing Webpages...</h3>
               <p className="text-base text-left md:text-justify mb-4">I make sure I spend plenty of time with my two furbabies, Baxter & Ninja. There is nothing more rewarding than being loved by your pets!</p>
@@ -72,6 +73,14 @@ const MyStory = () => {
               <p className="text-base text-left md:text-justify mb-4">Right now I spend a lot of my time watching silly British TV while crocheting a blanket for my husband. </p>
             </div>
           </div>
+        </div>
+        <hr className="pt-4 hidden lg:block xl:hidden"/>
+        <div className="w-[90%] lg:w-full mx-auto p-3 pb-0 hidden lg:block xl:hidden">
+          <h3 className="text-center text-2xl pb-4">When I'm Not Designing Webpages...</h3>
+          <p className="text-base text-left md:text-justify mb-4">I make sure I spend plenty of time with my two furbabies, Baxter & Ninja. There is nothing more rewarding than being loved by your pets!</p>
+          <p className="text-base text-left md:text-justify mb-4">I love to sit in front of the fire and play a game of Civilization with my husband.</p>
+          <p className="text-base text-left md:text-justify mb-4">I LOVE to build Legos! My favorites are the modular buildings, the plants, the world map wall hanging, and the great wonders (i.e. Taj Mahal, Sydney Opera House etc.).</p>
+          <p className="text-base text-left md:text-justify mb-4">Right now I spend a lot of my time watching silly British TV while crocheting a blanket for my husband. </p>
         </div>
       </div>
     </>

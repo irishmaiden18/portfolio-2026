@@ -51,7 +51,7 @@ function App() {
     <>
       <div className="min-h-screen flex flex-col jusitify-between bg-linear-to-b from-[#6BD1DF] to-[#FFFFFF]">
 
-        <DuringDevelopment/>
+        {/* <DuringDevelopment/> */}
 
         {NavFunction()}
 

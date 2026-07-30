@@ -68,7 +68,7 @@ const MyStory = () => {
             <div className="w-[90%] lg:w-full mx-auto lg:mx-0 p-3 pb-0 lg:pl-0 lg:pr-4 xl:pr-6 lg:hidden xl:flex xl:flex-col">
               <h3 className="text-center text-2xl pb-4">When I'm Not Designing Webpages...</h3>
               <p className="text-base text-left md:text-justify mb-4">I make sure I spend plenty of time with my two furbabies, Baxter & Ninja. There is nothing more rewarding than being loved by your pets!</p>
-              <p className="text-base text-left md:text-justify mb-4">I love to sit in front of the fire and play a game of Civilization with my husband.</p>
+              <p className="text-base text-left md:text-justify mb-4">I enjoy working in the garden with my husband to make things even more beautiful.</p>
               <p className="text-base text-left md:text-justify mb-4">I LOVE to build Legos! My favorites are the modular buildings, the plants, the world map wall hanging, and the great wonders (i.e. Taj Mahal, Sydney Opera House etc.).</p>
               <p className="text-base text-left md:text-justify mb-4">Right now I spend a lot of my time watching silly British TV while crocheting a blanket for my husband. </p>
             </div>

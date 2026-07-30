@@ -29,7 +29,7 @@ const ProjectItem = ({ projects }) => {
             {/* middle section: description; this row absorbs all variable height */}
             {description && (
                 <div className="w-[85%] mx-auto flex flex-col justify-start items-start">
-                    <p className="pt-4 pb-2 text-left sm:text-justify sm:text-justify-inner-word">{description}</p>
+                    <p className="pt-4 pb-2 text-left sm:text-justify">{description}</p>
                 </div>
             )}
 
@@ -37,9 +37,9 @@ const ProjectItem = ({ projects }) => {
             <div className="w-[85%] mx-auto mt-auto pt-1">
 
                 {technology && (
-                    <div className="min-h-15 md:mb-2">
+                    <div className="min-h-16 md:mb-2">
 
-                        <p className="text-left sm:text-justify sm:text-justify-inner-word">
+                        <p className="text-left sm:text-justify">
                             <span className="font-bold text-lg inline">Technology Used: </span>
                             <span className="inline">{technology}</span>
                         </p>

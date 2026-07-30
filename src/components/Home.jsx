@@ -15,15 +15,15 @@ const Home = () => {
           </div>
           <div className="w-full flex gap-x-5 pt-4">
             <Link to="/portfolio" className="flex-1 flex flex-col items-center">
-              <h3 className="sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Portfolio</h3>
+              <h3 className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Portfolio</h3>
               <img src="portfolio.jpg" alt="picture of portfolio page" className="w-[60%] h-auto object-cover"/>
             </Link>
             <Link to="/resume" className="flex-1 flex flex-col items-center">
-              <h3 className="sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Resume</h3>
+              <h3 className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Resume</h3>
               <img src="resume.jpg" alt="picture of resume" className="w-[60%] h-auto object-cover"/>
             </Link>
             <Link to="/my-story" className="flex-1 flex flex-col items-center">
-              <h3 className="sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">My Story</h3>
+              <h3 className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">My Story</h3>
               <img src="laura_pohl_in_nature-homepage2.jpg" alt="picture of my story page" className="w-[60%] h-auto object-cover"/>
             </Link>
           </div>

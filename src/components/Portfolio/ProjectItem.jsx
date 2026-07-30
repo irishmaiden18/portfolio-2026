@@ -39,7 +39,10 @@ const ProjectItem = ({ projects }) => {
                 {technology && (
                     <div className="min-h-15 md:mb-2">
 
-                        <p className="text-left sm:text-justify sm:text-justify-inner-word"><span className="font-bold text-lg">Technology Used: </span>{technology}</p>
+                        <p className="text-left sm:text-justify sm:text-justify-inner-word">
+                            <span className="font-bold text-lg inline">Technology Used: </span>
+                            <span className="inline">{technology}</span>
+                        </p>
 
                     </div>
                 )}

@@ -58,7 +58,7 @@ const ProjectItem = ({ projects }) => {
                                 href={site}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#008593] rounded-xl text-white py-2 px-2 text-center w-full shadow-lg flex items-center justify-center leading-none md:text-center md:inline-block"
+                                className="bg-[#008593] rounded-xl text-white py-2 px-2 text-center w-full shadow-lg flex items-center justify-center leading-relaxed md:text-center md:inline-block"
                             >
                                 Deployed Site
                             </a>
@@ -70,7 +70,7 @@ const ProjectItem = ({ projects }) => {
                                 href={github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#008593] rounded-xl text-white py-2 w-full shadow-lg flex items-center justify-center leading-none md:text-center md:inline-block"
+                                className="bg-[#008593] rounded-xl text-white py-2 w-full shadow-lg flex items-center justify-center leading-relaxed md:text-center md:inline-block"
                             >
                                 Github
                             </a>

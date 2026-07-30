@@ -28,34 +28,37 @@ const MyStory = () => {
         </div>
         <hr/>
         <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-2 lg:gap-0 pb-0 lg:pb-7 xl:pb-0">
-          <div>
+          <div className="pb-4 lg:pb-0">
             <div>
               <h3 className="text-center text-2xl py-4 lg:pt-8">Development Skills</h3>
-              <div className="pl-6">
+              <div className="min-[400px]:pl-6">
                 <WebSkillsList/>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30">
+            <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-4 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30">
               <div>
-                <h3 className="text-2xl py-4 pl-4">Technology</h3>
-                <h4 className="pl-6 md:pl-8 xl:pl-6 ">Proficient with:</h4>
-                <div className="pl-10 md:pl-12 xl:pl-10">
-                  <ProficientList/>
-                </div>
-                <h4 className="pl-6 md:pl-8 xl:pl-6 pt-4">Experience with:</h4>
-                <div className="pl-10 md:pl-12 xl:pl-10">
-                  <OtherList/>
+                <h3 className="text-2xl py-4 min-[400px]:pl-4 text-center min-[400px]:text-left">Technology</h3>
+                <div className="pl-6 min-[400px]:pl-0">
+                  <h4 className="pl-6 md:pl-8 xl:pl-6 text-lg">Proficient with:</h4>
+                  <div className="pl-10 md:pl-12 xl:pl-10">
+                    <ProficientList/>
+                  </div>
+                  <h4 className="pl-6 md:pl-8 xl:pl-6 pt-4 text-lg">Experience with:</h4>
+                  <div className="pl-10 md:pl-12 xl:pl-10">
+                    <OtherList/>
+                  </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl py-4 pl-4 sm:pl-2 2xl:pl-6">Tools</h3>
-                <div className="pl-6 sm:pl-4 md:pl-4 2xl:pl-8">
+                <h3 className="text-2xl py-4 min-[400px]:pl-4 sm:pl-2 2xl:pl-6 text-center min-[400px]:text-left">Tools</h3>
+                <div className="text-center min-[400px]:text-left min-[400px]:pl-6 sm:pl-4 md:pl-4 2xl:pl-8">
                   <ToolsList/>
                 </div>
               </div>
             </div>
           </div>
           <div>
+            <hr className="pt-4 lg:hidden"/>
             <div className="w-full px-4 md:px-8 lg:px-0 pt-2 lg:pt-8 md:pb-4 lg:pb-2">
               <h3 className="text-center text-2xl">Education</h3>
               <div className="w-full md:flex lg:block md:justify-center py-4">

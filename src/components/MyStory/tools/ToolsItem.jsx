@@ -4,7 +4,7 @@ const ToolsItem = ({tool}) => {
     const {name} = tool
 
   return (
-    <li>{name}</li>
+    <li className="text-base">{name}</li>
   )
 }
 

@@ -4,7 +4,7 @@ const ProficientItem = ({language}) => {
   const {text} = language
 
   return (
-    <li>{text}</li>
+    <li className="text-base">{text}</li>
   )
 }
 

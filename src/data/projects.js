@@ -19,6 +19,15 @@ export const projects = [
     },
     {
         id: 2,
-        image: "coming_soon.jpg",
+        name: "MiniShop",
+        image: "minishop.jpg",
+        description: "A responsive sample e-commerce web application that displays products from a remote API with filtering using buttons and a search field. It uses Auth0 for user authentication where logged-in users can add products and view an order history and features Paypal payment integration at checkout.",
+        technology: "React, JavaScript, HTML, CSS, Browser Router, Auth0, PayPal, Tailwind, REST API",
+        site: "https://minishop-oo89.onrender.com",
+        github: "https://github.com/irishmaiden18/MiniShop"
     },
+    // {
+    //     id: 2,
+    //     image: "coming_soon.jpg",
+    // },
 ]

@@ -32,7 +32,9 @@ const MyStory = () => {
             <div>
               <h3 className="text-center text-2xl py-4 lg:pt-8">Development Skills</h3>
               <div className="min-[400px]:pl-6">
-                <WebSkillsList/>
+                <div className="min-[400px]:columns-2 text-center min-[400px]:text-left gap-8 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30 2xl:gap-40 w-full max-w-120 mx-auto">
+                  <WebSkillsList/>
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-4 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30">
@@ -43,7 +45,7 @@ const MyStory = () => {
                   <div className="pl-10 md:pl-12 xl:pl-10">
                     <ProficientList/>
                   </div>
-                  <h4 className="pl-6 md:pl-8 xl:pl-6 pt-4 text-lg">Experience with:</h4>
+                  <h4 className="pl-6 md:pl-8 xl:pl-6 pt-4 text-lg">Experienced with:</h4>
                   <div className="pl-10 md:pl-12 xl:pl-10">
                     <OtherList/>
                   </div>

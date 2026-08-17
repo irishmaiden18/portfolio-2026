@@ -3,7 +3,7 @@ import WebSkillsItem from "./WebSkillsItem"
 
 const WebSkillsList = () => {
   return (
-    <ul className="min-[400px]:columns-2 text-center min-[400px]:text-left gap-8 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30 2xl:gap-40 w-full max-w-120 mx-auto">
+    <ul>
         {development_skills.map((web_skill, index) => (
             <WebSkillsItem
                 key={index}

@@ -22,7 +22,7 @@ const Home = () => {
         {/* summary */}
         <div className="md:mx-auto px-4 md:px-0 max-w-6xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center p-3">Summary</h2>
-          <p className="mx-4">Front-end web developer with hands-on experience building responsive, accessible, and user‑friendly websites using HTML, CSS, JavaScript, and React. Strong foundation in modern front-end practices, UI/UX principles, and component‑based development. Background includes freelance client work, e‑commerce projects, and full‑stack coursework. Known for clear communication, problem‑solving, and delivering polished, functional interfaces.</p>
+          <p className="mx-4">I am a front-end web developer with hands-on experience building responsive, accessible, and user‑friendly websites using HTML, CSS, JavaScript, and React. I have a strong foundation in modern front-end practices, UI/UX principles, and component‑based development. My background includes freelance client work, e‑commerce projects, and full‑stack coursework. I am known for clear communication, problem‑solving, and delivering polished, functional interfaces.</p>
         </div>
 
         {/* technical skills section */} 
@@ -68,7 +68,7 @@ const Home = () => {
             </div> 
           </div> 
         </div>
-        
+
         {/* links */}
         <div className="w-full flex gap-x-5 pt-4">
           <Link to="/portfolio" className="flex-1 flex flex-col items-center">

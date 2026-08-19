@@ -1,11 +1,14 @@
 import { useState } from "react"
 import { Link, NavLink, useLocation } from "react-router"
+import { useIntersection } from "./useIntersection"
 
 const DesktopNav = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   const {pathname} = useLocation()
+
+  const isPortfolioVisible = useIntersection("portfolio")
 
   return (
     <>
@@ -62,12 +65,46 @@ const DesktopNav = () => {
             </li>
             <li className="pt-3 px-5 pb-2 text-lg">
               <NavLink 
-                to="/portfolio" 
-                className={({isActive}) => `inline-block px-3 py-2 ${isActive ? "font-bold bg-[#008593]" : "hover:text-black hover:bg-[#7FD7E3] hover:[text-shadow:_0_0_0.6px_#000]"}`}
+                to="/#portfolio" 
+                className={`inline-block px-3 py-2 ${
+                  isPortfolioVisible 
+                    ? "font-bold bg-[#008593]" 
+                    : "hover:text-black hover:bg-[#7FD7E3] hover:[text-shadow:_0_0_0.6px_#000]"
+                }`} 
+                onClick={(e) => {
+                  // target the element by its matching ID string
+                  const element = document.getElementById("portfolio"); 
+                  if (element) { 
+                    // temporarily stop React Router from treating this like a standard route shift
+                    e.preventDefault(); 
+                    // scroll smoothly right down to the element
+                    element.scrollIntoView({ behavior: "smooth" }); 
+                  } 
+                }}
               >
                 Portfolio
               </NavLink>
             </li>
+            {/* <li className="pt-3 px-5 pb-2 text-lg">
+              <NavLink 
+                to="/#portfolio" 
+                className={({isActive}) => `inline-block px-3 py-2 ${isActive ? "font-bold bg-[#008593]" : "hover:text-black hover:bg-[#7FD7E3] hover:[text-shadow:_0_0_0.6px_#000]"}`}
+                onClick={(e) => {
+                  // 1. Target your element by its matching ID string
+                  const element = document.getElementById("portfolio");
+                  
+                  if (element) {
+                    // 2. Temporarily stop React Router from treating this like a standard route shift
+                    e.preventDefault(); 
+                    
+                    // 3. Glide smoothly right down to the element
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Portfolio
+              </NavLink>
+            </li> */}
             <li className="pt-3 px-5 pb-2 text-lg">
               <NavLink 
                 to="/resume" 

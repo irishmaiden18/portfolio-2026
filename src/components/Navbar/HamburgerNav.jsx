@@ -1,10 +1,12 @@
 import { useState } from "react"
 import { Link, NavLink, useLocation } from "react-router"
+import { useIntersection } from "./useIntersection"
 
 const HamburgerNav = () => {
 
   const [isOpen, setIsOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const isPortfolioVisible = useIntersection("portfolio")
 
   const {pathname} = useLocation()
 
@@ -61,7 +63,7 @@ const HamburgerNav = () => {
                   <NavLink 
                     to="/mascots" 
                     onClick={() => setIsDropdownOpen(false)}
-                    className={({isActive}) => isActive? "block font-bold bg-[#008593] w-full h-full ps-8 py-3" : "block w-full h-full hover:text-black hover:bg-[#7FD7E3] hover:py-3 hover:px-8 hover:font-bold px-8 py-3"}
+                    className={({isActive}) => isActive ? "block font-bold bg-[#008593] w-full h-full ps-8 py-3" : "block w-full h-full hover:text-black hover:bg-[#7FD7E3] hover:py-3 hover:px-8 hover:font-bold px-8 py-3"}
                   >
                     Mascots
                   </NavLink>
@@ -71,8 +73,22 @@ const HamburgerNav = () => {
             </li>
             <li className="text-xl w-full">
               <NavLink 
-                to="/portfolio" 
-                className={({isActive}) => isActive? "block font-bold bg-[#008593] w-full h-full px-8 py-3" : "block w-full h-full hover:text-black hover:bg-[#7FD7E3] hover:py-3 hover:px-8 hover:font-bold px-8 py-3"}
+                to="/#portfolio"
+                className={`${
+                  isPortfolioVisible 
+                    ? "block font-bold bg-[#008593] w-full h-full ps-8 py-3" 
+                    : "block w-full h-full hover:text-black hover:bg-[#7FD7E3] hover:py-3 hover:px-8 hover:font-bold px-8 py-3"
+                }`}
+                onClick={(e) => {
+                  // target the element by its matching ID string
+                  const element = document.getElementById("portfolio"); 
+                  if (element) { 
+                    // temporarily stop React Router from treating this like a standard route shift
+                    e.preventDefault(); 
+                    // scroll smoothly right down to the element
+                    element.scrollIntoView({ behavior: "smooth" }); 
+                  } 
+                }}
               >
                 Portfolio
               </NavLink>

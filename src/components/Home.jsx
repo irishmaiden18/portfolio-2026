@@ -3,6 +3,7 @@ import OtherList from "./MyStory/languages/OtherList"
 import ProficientList from "./MyStory/languages/ProficientList"
 import ToolsList from "./MyStory/tools/ToolsList"
 import WebSkillsList from "./MyStory/web_skills/WebSkillsList"
+import ProjectList from "./Portfolio/ProjectList"
 
 const Home = () => {
   return (
@@ -21,16 +22,16 @@ const Home = () => {
 
         {/* summary */}
         <div className="md:mx-auto px-4 md:px-0 max-w-6xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center p-3">Summary</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pt-3 lg:pt-6 pb-5">Summary</h2>
           <p className="mx-4">I am a front-end web developer with hands-on experience building responsive, accessible, and user‑friendly websites using HTML, CSS, JavaScript, and React. I have a strong foundation in modern front-end practices, UI/UX principles, and component‑based development. My background includes freelance client work, e‑commerce projects, and full‑stack coursework. I am known for clear communication, problem‑solving, and delivering polished, functional interfaces.</p>
         </div>
 
         {/* technical skills section */} 
         <div className="w-full flex justify-center my-0"> 
           <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center"> 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pt-3 pb-0 w-full">Technical Skills</h2> 
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pt-3 lg:pt-6 pb-0 w-full">Technical Skills</h2> 
 
-            <div className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-3 lg:max-w-fit lg:pl-20 xl:pl-35 gap-y-4 gap-x-16 sm:gap-x-30 pt-4 lg:pt-0 pb-4 w-fit mx-auto justify-items-center lg:justify-items-start"> 
+            <div className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-3 lg:max-w-fit lg:pl-20 xl:pl-35 gap-y-4 gap-x-16 sm:gap-x-30 pt-4 lg:pt-0 pb-0 w-fit mx-auto justify-items-center lg:justify-items-start"> 
               
               {/* development skills */} 
               <div className="w-full flex flex-col items-start col-span-full lg:col-span-1"> 
@@ -69,14 +70,20 @@ const Home = () => {
           </div> 
         </div>
 
+        <div id="portfolio">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pt-3 lg:pt-6 pb-5">Portfolio</h2>
+
+          <div className="p-2">
+
+            <ProjectList/>
+
+          </div>
+        </div>
+
         {/* links */}
         <div className="w-full flex gap-x-5 pt-4">
-          <Link to="/portfolio" className="flex-1 flex flex-col items-center">
-            <h3 className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Portfolio</h3>
-            <img src="portfolio_2.jpg" alt="picture of portfolio page" className="w-[60%] h-auto object-cover"/>
-          </Link>
           <Link to="/resume" className="flex-1 flex flex-col items-center">
-            <h3 className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Resume</h3>
+            <h3 className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl p-4">Resumé</h3>
             <img src="resume.jpg" alt="picture of resume" className="w-[60%] h-auto object-cover"/>
           </Link>
           <Link to="/my-story" className="flex-1 flex flex-col items-center">

@@ -11,7 +11,7 @@ const MyStory = () => {
         <div className="w-full block">
           <div className="w-[90%] mx-auto p-3 md:w-full flex flex-col md:block">
 
-            <h1 className="text-3xl mt-1 md:mt-5 mb-5 text-center order-2">My Story</h1>
+            <h1 className="text-4xl mt-1 md:mt-5 mb-5 text-center order-2">My Story</h1>
 
             <div className="mx-auto order-1 w-[85%] md:w-[40%] lg:w-[30%] xl:w-[20%] 2xl:w-[15%] pb-6 pt-8 md:pt-2 md:pb-1 lg:pb-0 xl:pt-0 xl:pb-5 md:float-right md:ml-6 md:mr-2">
               <img src="me_myStory.jpg" alt="picture of Laura Pohl" className="w-full h-auto object-contain block"/>
@@ -29,8 +29,9 @@ const MyStory = () => {
         <hr/>
         <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-2 lg:gap-0 pb-0 lg:pb-7 xl:pb-0">
           <div className="pb-4 lg:pb-0">
+            <h2 className="text-center text-3xl pt-6 pb-0 lg:pt-8">Technical Skills</h2>
             <div>
-              <h3 className="text-center text-2xl py-4 lg:pt-8">Development Skills</h3>
+              <h3 className="text-center text-2xl pt-3 pb-4 lg:pt-4">Development</h3>
               <div className="min-[400px]:pl-6">
                 <div className="min-[400px]:columns-2 text-center min-[400px]:text-left gap-8 sm:gap-24 md:gap-30 lg:gap-18 xl:gap-30 2xl:gap-40 w-full max-w-120 mx-auto">
                   <WebSkillsList/>
@@ -62,7 +63,7 @@ const MyStory = () => {
           <div>
             <hr className="pt-4 lg:hidden"/>
             <div className="w-full px-4 md:px-8 lg:px-0 pt-2 lg:pt-8 md:pb-4 lg:pb-2">
-              <h3 className="text-center text-2xl">Education</h3>
+              <h3 className="text-center text-3xl">Education</h3>
               <div className="w-full md:flex lg:block md:justify-center py-4">
                 <div className="w-full text-center md:text-left md:w-fit">
                   <EducationList/>
@@ -81,7 +82,7 @@ const MyStory = () => {
         </div>
         <hr className="pt-4 hidden lg:block xl:hidden"/>
         <div className="w-[90%] lg:w-full mx-auto p-3 pb-0 hidden lg:block xl:hidden">
-          <h3 className="text-center text-2xl pb-4">When I'm Not Designing Webpages...</h3>
+          <h3 className="text-center text-3xl pb-4">When I'm Not Designing Webpages...</h3>
           <p className="text-base text-left md:text-justify mb-4">I make sure I spend plenty of time with my two furbabies, Baxter & Ninja. There is nothing more rewarding than being loved by your pets!</p>
           <p className="text-base text-left md:text-justify mb-4">I love to sit in front of the fire and play a game of Civilization with my husband.</p>
           <p className="text-base text-left md:text-justify mb-4">I LOVE to build Legos! My favorites are the modular buildings, the plants, the world map wall hanging, and the great wonders (i.e. Taj Mahal, Sydney Opera House etc.).</p>

@@ -33,7 +33,7 @@ const Resume = () => {
   const containerRef = useRef(null)
 
   // creates a variable "pdfUrl" that holds the specific file path to my resume
-  const pdfUrl = "/20260528_resume_all_the_things.pdf"
+  const pdfUrl = "/20260815_resume.pdf"
 
   // callback handler function, executes once the react-pdf "Document" fully parses the target PDF
   // takes in an invisible (behind the scenes) automatic parameter from the <Document>. when the document finishes loading the PDF, the libary forces a data object into the onDocumentLoadSuccess function. the data object is the whole PDF object and all the data associated with it. which is why the function has a parameter but when we call the function in the JSX there is no parameter listed. it is automatic and invisible
@@ -95,7 +95,7 @@ const Resume = () => {
 
   return (
     <> 
-      <div className="container mx-auto flex flex-col items-center h-auto p-2 md:p-6"> 
+      <div className="container mx-auto flex flex-col items-center h-auto p-2 md:pt-12 pb-6"> 
         
         {/* ref={containerRef} links this div to the reference hook created earlier (containerRef). it lets the code constantly measure exactly how many pixels wide this box is so that the pdf inside can scale perfectly*/}
         {/* rounded-xl: border-radius: 0.75rem; shadow-lg: uses box-shadow property to make the element look like it is floating above the background of the webpage; overflow-hidden: hides sharp internal cordners of the PDF so it doesn't break the rounded edges*/}
@@ -126,7 +126,7 @@ const Resume = () => {
         </div> 
 
         {/* if there is no loading arror and there is a numPages display this block */}
-        {!renderError && numPages && (
+        {/* {!renderError && numPages && (
           <div className="flex items-center gap-4 mt-6 bg-white px-5 py-3 rounded-full shadow-md border border-slate-100"> 
             
             <button 
@@ -142,7 +142,7 @@ const Resume = () => {
             </span> 
             
             {/* Next Page Button: locked when page count maxes out, executes clean incremental function state update operations */}
-            <button 
+            {/* <button 
               disabled={pageNumber >= numPages} 
               onClick={() => setPageNumber(prev => prev + 1)} 
               className="px-4 py-2 text-white bg-[#008593] rounded-full disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed" 
@@ -151,7 +151,16 @@ const Resume = () => {
             </button> 
           
           </div>
-        )} 
+        )}  */}
+        <div className="pt-12">
+          <a
+            href="20260815_CV.pdf"
+            download
+            className="px-6 py-3 text-white bg-[#008593] font-semibold rounded-full shadow-md hover:bg-[#006c78] transition duration-200"
+          >
+            Download my CV here!
+          </a>
+        </div>
       </div> 
     </> 
   ) 

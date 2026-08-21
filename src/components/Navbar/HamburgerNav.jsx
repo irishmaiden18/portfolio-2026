@@ -10,6 +10,20 @@ const HamburgerNav = () => {
 
   const {pathname} = useLocation()
 
+  const handlePortfolioClick = (e) => {
+    
+    if (pathname === "/") {
+      // temporarily stop React Router from treating this like a standard route shift
+      e.preventDefault()
+
+      const element = document.getElementById("portfolio")
+      if (element) {
+        // scroll smoothly right down to the element
+        element.scrollIntoView({ behavior: "smooth"})
+      }
+    }
+  }
+
   return (
     <>
     {/* <br className="min-[500px]:hidden" /> */}
@@ -79,16 +93,7 @@ const HamburgerNav = () => {
                     ? "block font-bold bg-[#008593] w-full h-full ps-8 py-3" 
                     : "block w-full h-full hover:text-black hover:bg-[#7FD7E3] hover:py-3 hover:px-8 hover:font-bold px-8 py-3"
                 }`}
-                onClick={(e) => {
-                  // target the element by its matching ID string
-                  const element = document.getElementById("portfolio"); 
-                  if (element) { 
-                    // temporarily stop React Router from treating this like a standard route shift
-                    e.preventDefault(); 
-                    // scroll smoothly right down to the element
-                    element.scrollIntoView({ behavior: "smooth" }); 
-                  } 
-                }}
+                onClick={handlePortfolioClick}
               >
                 Portfolio
               </NavLink>

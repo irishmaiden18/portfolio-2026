@@ -4,8 +4,32 @@ import ProficientList from "./MyStory/languages/ProficientList"
 import ToolsList from "./MyStory/tools/ToolsList"
 import WebSkillsList from "./MyStory/web_skills/WebSkillsList"
 import ProjectList from "./Portfolio/ProjectList"
+import { useEffect } from "react"
+import { useLocation } from "react-router-dom"
 
 const Home = () => {
+
+  const location = useLocation()
+
+  useEffect(() => {
+
+    // check if the current URL has the #portfolio anchor
+    if (location.hash === "#portfolio") {
+
+      const timer = setTimeout(() => {
+        const element = document.getElementById("portfolio")
+
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth"})
+
+          // cleans the url, changes /#porfolio back to "/"
+          window.history.replaceState(null, "", "/")
+        } 
+      }, 200)
+      return () => clearTimeout(timer)
+    }
+  }, [location]) // reruns whenever the reoute location changes
+
   return (
     <>
       <div className="md:container mx-auto grid grid-cols-1 gap-y-3">

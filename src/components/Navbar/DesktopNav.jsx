@@ -10,6 +10,20 @@ const DesktopNav = () => {
 
   const isPortfolioVisible = useIntersection("portfolio")
 
+  const handlePortfolioClick = (e) => {
+    
+    if (pathname === "/") {
+      // temporarily stop React Router from treating this like a standard route shift
+      e.preventDefault()
+
+      const element = document.getElementById("portfolio")
+      if (element) {
+        // scroll smoothly right down to the element
+        element.scrollIntoView({ behavior: "smooth"})
+      }
+    }
+  }
+
   return (
     <>
       <div className="bg-[#333333] text-white container mx-auto">
@@ -71,16 +85,7 @@ const DesktopNav = () => {
                     ? "font-bold bg-[#008593]" 
                     : "hover:text-black hover:bg-[#7FD7E3] hover:[text-shadow:_0_0_0.6px_#000]"
                 }`} 
-                onClick={(e) => {
-                  // target the element by its matching ID string
-                  const element = document.getElementById("portfolio"); 
-                  if (element) { 
-                    // temporarily stop React Router from treating this like a standard route shift
-                    e.preventDefault(); 
-                    // scroll smoothly right down to the element
-                    element.scrollIntoView({ behavior: "smooth" }); 
-                  } 
-                }}
+                onClick={handlePortfolioClick}
               >
                 Portfolio
               </NavLink>

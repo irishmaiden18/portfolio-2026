@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, NavLink, useLocation } from "react-router"
-import { useIntersection } from "./useIntersection"
+import { useIntersection } from "./UseIntersection"
 
 const DesktopNav = () => {
 

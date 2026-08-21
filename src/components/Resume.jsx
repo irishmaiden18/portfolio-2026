@@ -83,7 +83,7 @@ const Resume = () => {
         download
         className="px-6 py-3 text-white bg-[#008593] font-semibold rounded-full shadow-md hover:bg-[#006c78] transition duration-200"
       >
-        Download Resume PDF
+        Download Resumé PDF
       </a>
     </div>
   )
@@ -153,13 +153,22 @@ const Resume = () => {
           </div>
         )}  */}
         <div className="pt-12">
-          <a
-            href="20260815_CV.pdf"
-            download
-            className="px-6 py-3 text-white bg-[#008593] font-semibold rounded-full shadow-md hover:bg-[#006c78] transition duration-200"
-          >
-            Download my CV here!
-          </a>
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a
+              href={pdfUrl}
+              download
+              className="w-full md:w-auto text-center px-6 py-3 text-white bg-[#008593] font-semibold rounded-full shadow-md hover:bg-[#006c78] transition duration-200"
+            >
+              Download my Resumé PDF here!
+            </a>
+            <a
+              href="20260815_CV.pdf"
+              download
+              className="w-full md:w-auto text-center px-6 py-3 text-white bg-[#008593] font-semibold rounded-full shadow-md hover:bg-[#006c78] transition duration-200"
+            >
+              Download my CV PDF here!
+            </a>
+          </div>
         </div>
       </div> 
     </> 
